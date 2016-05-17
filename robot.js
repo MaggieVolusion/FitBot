@@ -13,7 +13,7 @@ if (process.env.SLACK_TOKEN == undefined || process.env.SLACK_TOKEN == null) {
     slackToken = process.env.SLACK_TOKEN;
 }
 
-// connect the bot to a stream of messages
+
 controller.spawn({
     token: slackToken
 }).startRTM();
