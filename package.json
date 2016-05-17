@@ -1,16 +1,17 @@
 {
-  "name":"hourlyfitnessbot",
-  "version":"0.0.1",
+  "name": "hourlyfitnessbot",
+  "version": "0.0.1",
   "description": "A slack bot written in node that does something cool.",
-  "main":"robot.js",
-  "scripts":{
+  "main": "robot.js",
+  "scripts": {
     "start": "node robot.js"
   },
   "dependencies": {
-    "botkit":"0.1.1"
+    "botkit": "0.1.1",
+    "request": "^2.72.0"
   },
   "engines": {
-    "node":"4.2.6"
+    "node": "4.2.6"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
     "slack",
     "fitness"
   ],
-  "author":"",
-  "license":""
+  "author": "",
+  "license": ""
 }
