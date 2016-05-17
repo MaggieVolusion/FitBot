@@ -32,15 +32,15 @@ var isWorkHour = function(currentTime) {
 };
 
 var isOnHour = function(currentTime){
-    return currentTime.getMinutes() === 0;
+    return currentTime.getMinutes() === 0
 };
 
 controller.hears(['start', 'Start', 'I\'m ready!', 'Let\'s do this!'],['direct_message','direct_mention','mention'],function(bot,message) {
 
-    bot.reply(message, "Get ready for your hourly workouts!");
+    bot.reply(message, "Get ready for your hourly workouts on the hour!\nJust remember:\n\"Dude, suckin' at something is the first step towards being sorta good at something\"");
+    bot.reply(message, "Say, 'stop' to stop.");
 
-
-    setInterval(function(){hourlyTimer()},60000);
+    timer = setInterval(function(){hourlyTimer()},60000);
 
     function hourlyTimer() {
         var currentTime = new Date();
@@ -61,9 +61,13 @@ controller.hears(['start', 'Start', 'I\'m ready!', 'Let\'s do this!'],['direct_m
             "Oh, look at the time! You don't even have to get up!\n Do " + randomCount(15, 30) + " seconds of arm circles."
 
         ];
-        var rndNum = Math.round(Math.random()*8);
+        var rndNum = Math.round(Math.random()*9);
 
         bot.reply(message, exercises[rndNum]);
 
     }
+    controller.hears('stop',['direct_message','direct_mention','mention'],function(bot,message) {
+        clearInterval(timer);
+        bot.reply(message, "Okay... if you're sure you want me to stop... I'll shut up now");
+    })
 });
