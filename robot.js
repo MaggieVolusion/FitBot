@@ -77,7 +77,7 @@ controller.hears('help', ['direct_message', 'direct_mention', 'mention'],functio
     bot.reply(message, "I can send you hourly workouts to do with a randomized rep count.\nCommands:\n" +
         "*start core*: I'll only send you core workouts\n" +
         "*start legs*: I'll only send you leg workouts\n" +
-        "*start arms* / *start upperbody* / *start upper body*: I'll only snd you upper-body workouts" +
+        "*start arms* / *start upperbody* / *start upper body*: I'll only send you upper-body workouts\n" +
         "*start*: Gets me started and I'll continue to send you the default random workouts on the hour\n" +
         "*stop*: I'll shut up until you tell me to start again\n"
     )
