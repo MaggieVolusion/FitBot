@@ -58,7 +58,6 @@ controller.hears(['start', 'Start'],['direct_message','direct_mention','mention'
 
     function hourlyTimer() {
         var currentTime = new Date();
-        console.log(currentTime);
         if(!isWorkDay(currentTime) || !isWorkHour(currentTime)|| !isOnHour(currentTime)) {
             return;
         }
