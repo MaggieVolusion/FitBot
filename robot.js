@@ -28,7 +28,7 @@ var isWorkDay = function(currentTime){
 };
 
 var isWorkHour = function(currentTime) {
-    return (currentTime.getHours() >= 8 && currentTime.getHours() <= 18);
+    return (currentTime.getHours() >= 13 && currentTime.getHours() <= 23);
 };
 
 var isOnHour = function(currentTime){
